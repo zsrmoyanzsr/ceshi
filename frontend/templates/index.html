@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页界面</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+</head>
+<body>
+    <!--顶部-->
+    <header class="header left">
+        <div class="left nav">
+            <ul>
+                <li class="nav_active"><i class="nav_1"></i><a href="/index">数据概览</a> </li>
+                <li><i class="nav_2"></i><a href="/carContrl">车辆监控</a> </li>
+                <li><i class="nav_3"></i><a href="/map">地图界面</a> </li>
+                <li><i class="nav_7"></i><a href="/static1">查询统计</a> </li>
+
+
+            </ul>
+        </div>
+        <div class="header_center left">
+            <!--<h2><strong>智慧交通大数据监控平台</strong></h2>-->
+        </div>
+        <div class="right nav text_right">
+            <ul>
+
+                <li><i class="nav_8"></i><a href="/message">信息录入</a> </li>
+                <li><i class="nav_4"></i><a href="/table1">表格界面</a> </li>
+                <li><i class="nav_4"></i><a href="/admin">后台管理</a> </li>
+                <li class="nav_active"><i class="nav_4"></i><a href="/loginsout">退出登录</a> </li>
+
+
+            </ul>
+        </div>
+        <!--<nav class="left nav">-->
+        <!--<ul>-->
+        <!--<li class="nav_active"><i class="nav_1"></i><a href="index.html">数据概览</a> </li>-->
+        <!--<li><i class="nav_2"></i><a href="carContrl.html">车辆监控</a> </li>-->
+        <!--<li><i class="nav_3"></i><a href="map.html">地图界面</a> </li>-->
+        <!--<li><i class="nav_4"></i><a href="javascript:void(0)">表格界面</a><ul class="li_ul">-->
+        <!--<li><a href="table1.html">表格一</a> </li>-->
+        <!--<li><a href="table2.html">表格二</a> </li>-->
+        <!--</ul> </li>-->
+        <!--&lt;!&ndash;<li><i class="nav_5"></i><a href="#">车载视频</a> </li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li><i class="nav_6"></i><a href="#">视频监控</a> </li>&ndash;&gt;-->
+        <!--<li><i class="nav_7"></i><a href="static.html">查询统计</a> </li>-->
+        <!--<li><i class="nav_8"></i><a href="message.html">信息录入</a> </li>-->
+        <!--</ul>-->
+        <!--</nav>-->
+    </header>
+    <!--内容部分-->
+    <div class="con left">
+        <!--选择时间-->
+        <!--<div class="select_time">
+            <div class="static_top left">
+                <i></i><span>总体概况</span>
+            </div>
+        </div>-->
+        <!--数据总概-->
+        <div class="con_div">
+            <div class="con_div_text left">
+                <div class="con_div_text01 left">
+                    <img src="/static/img/info_1.png" class="left text01_img">
+                    <div class="left text01_div">
+                        <p>永和路车辆数(辆)</p>
+                        <p>45452</p>
+                    </div>
+                </div>
+                <div class="con_div_text01 right">
+                    <img src="/static/img/info_2.png" class="left text01_img">
+                    <div class="left text01_div">
+                        <p>超速车辆(辆)</p>
+                        <p>16</p>
+                    </div>
+                </div>
+            </div>
+            <div class="con_div_text left">
+                <div class="con_div_text01 left">
+                    <img src="/static/img/info_4.png" class="left text01_img">
+                    <div class="left text01_div">
+                        <p>和平大道车辆数（辆）</p>
+                        <p class="sky">45452</p>
+                    </div>
+                </div>
+                <div class="con_div_text01 right">
+                    <img src="/static/img/info_5.png" class="left text01_img">
+                    <div class="left text01_div">
+                        <p>闯红灯车辆总数（辆）</p>
+                        <p class="sky">12</p>
+                    </div>
+                </div>
+            </div>
+            <div class="con_div_text left">
+
+                <div class="con_div_text01 left">
+                    <img src="/static/img/info_6.png" class="left text01_img">
+                    <div class="left text01_div">
+                        <p>全市车辆数（辆）</p>
+                        <p class="org">747681</p>
+                    </div>
+                </div>
+                <div class="con_div_text01 right">
+                    <img src="/static/img/info_7.png" class="left text01_img">
+                    <div class="left text01_div">
+                        <p>日平均违法车辆（辆）</p>
+                        <p class="org">52</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--统计分析图-->
+        <div class="div_any">
+            <div class="left div_any01">
+                <div class="div_any_child">
+                    <div class="div_any_title"><img src="/static/img/title_1.png">车辆类型统计 </div>
+                    <p id="char1" class="p_chart"></p>
+                </div>
+                <div class="div_any_child">
+                    <div class="div_any_title"><img src="/static/img/title_2.png">车辆状态统计 </div>
+                    <p id="char2" class="p_chart"></p>
+
+                </div>
+            </div>
+            <div class="div_any02 left ">
+                <div class="div_any_child_index div_height">
+                    <div class="div_any_title any_title_width"><img src="/static/img/title_3.png">车辆行驶地图 </div>
+                    <div id="map_div"></div>
+                </div>
+            </div>
+            <div class="right div_any01">
+                <div class="div_any_child">
+                    <div class="div_any_title"><img src="/static/img/title_4.png">拥堵监测 </div>
+                    <p id="char3" class="p_chart"></p>
+                </div>
+                <!--<div class="div_any_child">
+                    <div class="div_any_title"><img src="/static/img/title_5.png">车辆报警统计 </div>
+                    <p id="char4" class="p_chart"></p>
+                </div>-->
+
+                <div class="div_any_child">
+                    <div class="div_any_title"></div>
+                    <p id="char4" class="p_chart" ></p>
+                </div>
+            </div>
+        </div>
+        <!--分析表格-->
+        <div class="div_table">
+            <div class="left div_table_box">
+                <div class="div_any_child">
+                    <div class="div_any_title"><img src="/static/img/title_4.png">路口拥堵情况 </div>
+                    <div class="table_p">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>拥堵排名</th>
+                                    <th>路口</th>
+                                    <th>预计拥堵时间（min）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>永和路</td><td>44</td></tr>
+                                <tr><td>2</td><td>南湖路</td><td>43</td></tr>
+                                <tr><td>3</td><td>汪溪路</td><td>35</td></tr>
+                                <tr><td>4</td><td>经五路</td><td>32</td></tr>
+                                <tr><td>5</td><td>阳光大道</td><td>28</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <div class="left div_table_box">
+                <div class="div_any_child">
+                    <div class="div_any_title"><img src="/static/img/title_4.png">路口车流量统计 </div>
+                    <div class="table_p">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>排名</th>
+                                    <th>路口</th>
+                                    <th>车流量总数（辆）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>永和路</td><td>65434</td></tr>
+                                <tr><td>2</td><td>南湖路</td><td>56793</td></tr>
+                                <tr><td>3</td><td>汪溪路</td><td>55433</td></tr>
+                                <tr><td>4</td><td>经五路</td><td>24579</td></tr>
+                                <tr><td>5</td><td>阳光大道</td><td>23909</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="left div_table_box">
+                <div class="div_any_child">
+                    <div class="div_any_title"><img src="/static/img/title_4.png">自适应信号灯 </div>
+                    <div class="table_p">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>路口</th>
+                                    <th>红灯时间（s）</th>
+                                    <th>绿灯时间（s）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>永和路</td><td>10</td><td>44</td></tr>
+                                <tr><td>南湖路</td><td>11</td><td>43</td></tr>
+                                <tr><td>汪溪路</td><td>13</td><td>35</td></tr>
+                                <tr><td>经五路</td><td>14</td><td>32</td></tr>
+                                <tr><td>阳光大道</td><td>19</td><td>28</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="left div_table_box">
+                <div class="div_any_child">
+                    <div class="div_any_title"><img src="/static/img/title_4.png">拥堵解决排名 </div>
+                    <div class="table_p">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>排名</th>
+                                    <th>路口</th>
+                                    <th>时长（min）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>南湖路</td><td>4</td></tr>
+                                <tr><td>2</td><td>汪溪路</td><td>6</td></tr>
+                                <tr><td>3</td><td>经五路</td><td>8</td></tr>
+                                <tr><td>4</td><td>永和路</td><td>9</td></tr>
+                                <tr><td>5</td><td>阳光大道</td><td>10</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/jquery/jQuery-2.2.0.min.js"></script>
+    <script src="/static/js/echarts.js"></script>
+
+    <script src="/static/js/base.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+    <script src="/static/js/map.js"></script>
+</body>
+</html>

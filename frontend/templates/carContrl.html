@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>车辆监控</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link href="/static/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
+
+</head>
+<style>
+
+</style>
+<body>
+<!--顶部-->
+<header class="header left">
+    <div class="left nav">
+        <ul>
+            <li ><i class="nav_1"></i><a href="/index">数据概览</a> </li>
+            <li class="nav_active"><i class="nav_2"></i><a href="/carContrl">车辆监控</a> </li>
+            <li><i class="nav_3"></i><a href="/map">地图导航</a> </li>
+
+
+
+        </ul>
+    </div>
+    <!--<div class="header_center left">
+        <h2><strong>智慧交通大数据监控平台</strong></h2>
+    </div>-->
+    <div class="right nav text_right">
+        <ul> <li><i class="nav_7"></i><a href="/static1">查询统计</a> </li>
+            <li><i class="nav_8"></i><a href="/message">信息录入</a> </li>
+            <li><i class="nav_4"></i><a href="/table1">表格界面</a> </li>
+        </ul>
+    </div>
+    <!--<nav class="left nav">-->
+    <!--<ul>-->
+    <!--<li class="nav_active"><i class="nav_1"></i><a href="index.html">数据概览</a> </li>-->
+    <!--<li><i class="nav_2"></i><a href="carContrl.html">车辆监控</a> </li>-->
+    <!--<li><i class="nav_3"></i><a href="map.html">地图界面</a> </li>-->
+    <!--<li><i class="nav_4"></i><a href="javascript:void(0)">表格界面</a><ul class="li_ul">-->
+    <!--<li><a href="table1.html">表格一</a> </li>-->
+    <!--<li><a href="table2.html">表格二</a> </li>-->
+
+    <!--</ul> </li>-->
+    <!--&lt;!&ndash;<li><i class="nav_5"></i><a href="#">车载视频</a> </li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><i class="nav_6"></i><a href="#">视频监控</a> </li>&ndash;&gt;-->
+    <!--<li><i class="nav_7"></i><a href="static.html">查询统计</a> </li>-->
+    <!--<li><i class="nav_8"></i><a href="message.html">信息录入</a> </li>-->
+    <!--</ul>-->
+    <!--</nav>-->
+</header>
+<!--内容部分-->
+<div class="con1 left" id="car_control">
+<div class="left car_left">
+<div class="left_down bow_shadow" style="height: 100%;">
+    <div class="car_content">
+           <table class="table_p" style = "border-collapse:separate; border-spacing:20px;">
+                    <tbody style="font-size: 15px;">
+                    <tr>
+                        <td colspan="2"  >违规总数</td>
+                        <td colspan="3" class="font01">7632</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="2">事故数</td>
+                        <td colspan="3" class="font02">3</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="2">超速数：</td>
+                        <td>1563个</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">占用非机动车道数：</td>
+                        <td>352个</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">闯红灯数：</td>
+                        <td>261个</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">识别车牌数：</td>
+                        <td>256234个</td>
+                    </tr>
+                </tbody></table>
+        </div>
+    </div>
+</div>
+
+<div class="left car_center" style="width: 50%">
+    <video src="/static/img/face.mp4" loop autoplay muted></video>
+    <video src="/static/img/face1.mp4" class="magin_left" loop autoplay muted></video>
+    <video src="/static/img/face2.mp4" class="magin_top" loop autoplay muted></video>
+    <video src="/static/img/face3.mp4" class="magin_top magin_left" loop autoplay muted></video>
+    </div>
+    <div class="right car_right" id="map"></div>
+</div>
+<script src="/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="/static/js/echarts-all.js"></script>
+<script src="/static/js/base.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+<script src="/static/js/car_control.js"></script>
+<script src="/static/js/ztree/jquery.ztree.all-3.5.js"></script>
+<script src="/static/js/listTree.js"></script>
+
+</body>
+</html>

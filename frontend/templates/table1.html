@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格一</title>
+    <link rel="stylesheet" href="/static/js/bstable/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/js/bstable/css/bootstrap-table.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link href="/static/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
+
+</head>
+<style>
+
+</style>
+<body>
+<!--顶部-->
+<header class="header left">
+    <div class="left nav">
+        <ul>
+            <li><i class="nav_1"></i><a href="/index">数据概览</a> </li>
+            <li><i class="nav_2"></i><a href="/carContrl">车辆监控</a> </li>
+            <li><i class="nav_3"></i><a href="/map">地图界面</a> </li>
+            <li><i class="nav_7"></i><a href="/static1">查询统计</a> </li>
+
+
+        </ul>
+    </div>
+    <div class="header_center left">
+{#        <h1><strong>智慧交通大数据监控平台</strong></h1>#}
+    </div>
+    <div class="right nav text_right">
+            <ul>
+
+            <li><i class="nav_8"></i><a href="/message">信息录入</a> </li>
+                <li><i class="nav_4"></i><a href="/admin">后台管理</a> </li>
+            <li class="nav_active"><i class="nav_4"></i><a href="/loginsout">退出登录</a> </li>
+        </ul>
+    </div>
+    <!--<nav class="left nav">-->
+    <!--<ul>-->
+    <!--<li class="nav_active"><i class="nav_1"></i><a href="index.html">数据概览</a> </li>-->
+    <!--<li><i class="nav_2"></i><a href="carContrl.html">车辆监控</a> </li>-->
+    <!--<li><i class="nav_3"></i><a href="map.html">地图界面</a> </li>-->
+    <!--<li><i class="nav_4"></i><a href="javascript:void(0)">表格界面</a><ul class="li_ul">-->
+    <!--<li><a href="table1.html">表格一</a> </li>-->
+    <!--<li><a href="table2.html">表格二</a> </li>-->
+
+    <!--</ul> </li>-->
+    <!--&lt;!&ndash;<li><i class="nav_5"></i><a href="#">车载视频</a> </li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><i class="nav_6"></i><a href="#">视频监控</a> </li>&ndash;&gt;-->
+    <!--<li><i class="nav_7"></i><a href="static.html">查询统计</a> </li>-->
+    <!--<li><i class="nav_8"></i><a href="message.html">信息录入</a> </li>-->
+    <!--</ul>-->
+    <!--</nav>-->
+</header>
+<div class="clear"></div>
+<!--内容部分-->
+<div class="con1 left" id="car_control">
+
+    <div class="right " style="width: 100%;">
+        <div class="table_find">
+            <form>
+            <p><label>名称：</label>
+                <input type="text" name="name" placeholder="请输入姓名">
+                <label>身份证号：</label>
+                <input type="text" placeholder="请输入编号" name="nameid">
+                <label>选择类型：</label>
+                <select name="type1">
+                    <option></option>
+                    <option>违章查询</option>
+                    <option>罚款缴纳</option>
+                    <option>事故快处</option>
+                    <option>事故处理进度和结果</option>
+                </select
+                ><label>关键字：</label>
+                <input type="text" placeholder="请输入关键字"></p>
+                <p>
+                    <span>&nbsp;</span>
+                <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span>查询</button>
+                <span class="more_find right" onclick="openList()" id="open">高级查询>></span></p>
+
+            <div class="find_expend">
+                <p>
+                    <label>车辆类型：</label>
+                    <select name="chetype">
+                        <option></option>
+                        <option>货车</option>
+                        <option>小型汽车</option>
+                        <option>大型汽车</option>
+                        <option>挂车</option>
+                        <option>摩托车</option></select>
+                    <label>驾驶证编号：</label>
+                    <input type="text" placeholder="请输入编号" name="driversnumber">
+                    <label>车牌号：</label>
+                    <input type="text" placeholder="请输入车牌号" name="platenumber">
+                    <label>货车通行码：</label>
+                    <input type="text" placeholder="请输入编码" name="Truckpass">
+                </p>
+                    <span class="more_find right" onclick="closeList()">收起>></span></p>
+            </div>
+            </form>
+        </div>
+        <div class="table_div">
+            <p class="table_but"><a href="javascript:void(0)" onclick="add()"><i class="glyphicon glyphicon-plus"></i>新增</a><a onclick="tb2csv()" href="javascript:void(0)"><i class="glyphicon glyphicon-export"></i>导出</a> </p>
+            <p>
+            <table id="table" class="table_style" border="0">
+            </table>
+            </p>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+<script src="/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="/static/js/base.js"></script>
+<script src="/static/js/table1.js"></script>
+<script src="/static/js/ztree/jquery.ztree.all-3.5.js"></script>
+<script src="/static/js/listTree.js"></script>
+<script src="/static/js/bstable/js/bootstrap.min.js"></script>
+<script src="/static/js/bstable/js/bootstrap-table.js"></script>
+<script src="/static/js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="/static/js/layer_v2.1/layer/layer.js"></script>
+
+<script>
+    //导出csv文件
+        function tb2csv() {
+            var $trs = $("#table").find("tr");//表格id元素
+            var str = "";
+            for (var i = 0; i < $trs.length; i++) {
+                var $tds = $trs.eq(i).find("td,th");
+                for (var j = 0; j < $tds.length; j++) {
+                    str += $tds.eq(j).text() + ",";
+                }
+                str += "\n";
+            }
+            var csv = "data:text/csv;charset=utf-8,\ufeff" + str;
+            var link = document.createElement("a");
+            link.setAttribute("href", csv);
+            link.setAttribute("download", new Date().getTime() + ".csv");//文件名
+            link.click();//下载文件
+        }
+
+</script>
+
+</body>
+</html>

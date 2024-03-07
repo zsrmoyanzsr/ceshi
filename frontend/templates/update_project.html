@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>更新设备</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<br/>
+<form class="form-horizontal" role="form" action="/up_project?id={{ id }}" method="post">
+	<div class="form-group">
+		<label for="firstname" class="col-sm-2 control-label"   >姓名</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="firstname" name="name" value="{{ data.name }}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">身份证</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="lastname" name="nameid" value="{{ data.nameid }}"
+				   >
+		</div>
+	</div>
+    <div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">选择类型</label>
+		<div class="col-sm-10">
+			<select  class="form-control"  name="types" >
+				<option value="{{ data.types }}">{{ data.types }}</option>
+				<option value="违章查询">违章查询</option>
+				<option value="罚款缴纳">罚款缴纳</option><option value="事故快处">事故快处</option><option value="事故处理进度和结果">事故处理进度和结果</option></select>
+		</div>
+	</div>
+    <div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">关键词</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="lastname2" name="gjc"  value="{{ data.gjc }}"
+				   >
+		</div>
+	</div>
+    <div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">选择方式</label>
+		<div class="col-sm-10">
+            <select  class="form-control" name="fanshi">
+				<option value="{{ data.fanshi }}">{{ data.fanshi }}</option>
+                <option value="方式1">方式1</option>
+                <option value="方式2">方式2</option>
+                <option value="方式3">方式3</option>
+                <option value="方式4">方式4</option>
+                <option value="方式5">方式5</option></select>
+		</div>
+	</div>
+    <div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">车辆类型</label>
+		<div class="col-sm-10">
+            <select  class="form-control"  name="chetype">
+				<option value="{{ data.chetype }}">{{ data.chetype }}</option>
+				<option value="货车">货车</option>
+				<option value="小型汽车">小型汽车</option><option value="大型汽车">大型汽车</option><option value="挂车">挂车</option><option value="摩托车">摩托车</option></select>
+		</div>
+	</div>
+    <div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">驾驶证编号</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="lastname3" name="driversnumber"  value="{{ data.driversnumber }}"
+				   >
+		</div>
+	</div>
+    <div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">车牌号</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="lastname3" name="platenumber"  value="{{ data.platenumber }}"
+				   >
+		</div>
+	</div>
+    <div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">货车通行码</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="lastname3" name="Truckpass"  value="{{ data.Truckpass }}"
+				   >
+		</div>
+	</div>
+
+
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default">确定更新</button>
+		</div>
+	</div>
+</form>
+
+</body>
+</html>
